@@ -4,31 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "cc1382330913cfde",
+        "id": "dd8c78fbc57f1bdf",
         "type": "tabs",
         "children": [
           {
-            "id": "c840af567d665775",
+            "id": "df25aef72aba2f90",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
             }
-          },
-          {
-            "id": "c0101ce72790e17b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "INTERIM REPORT.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "INTERIM REPORT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "INTERIM REPORT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "INTERIM REPORT.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -156,14 +139,17 @@
       "obsidian-matrix:Obsidian Matrix": false
     }
   },
-  "active": "c0101ce72790e17b",
+  "active": "df25aef72aba2f90",
   "lastOpenFiles": [
+    "INTERIM REPORT.pdf",
+    "INTERIM REPORT.md",
+    "INTERIM REPORT3.pdf",
+    "INTERIM REPORT2.pdf",
     "bwhlf.png",
     "dot.jpeg",
     "black.jpeg",
     "panda.jpeg",
     "bw_panda.jpeg",
-    "bw1.webp",
-    "INTERIM REPORT.md"
+    "bw1.webp"
   ]
 }
