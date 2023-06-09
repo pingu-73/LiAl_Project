@@ -44,7 +44,8 @@ In the final Project report, we'll be covering the following topics:
 -------------------------------
 
 ----------
-$$\pagebreak$$
+<div style="page-break-after: always;"></div>
+
 ## Motivation:
 Taking Black and white Picture as example$(\because grey-scale\ has\ only\ two\ values)$  
 ![[bw_panda.jpeg]]
@@ -59,6 +60,7 @@ If it was a coloured image than we would have length of vector as $3\times (512)
 Since, JPEG being is widely used. So, we'll be discussing about jpeg in our project.
 
 ------------------
+<div style="page-break-after: always;"></div>
 
 ## JPEG(Joint Photographic Experts Group)
 - ### HOW??
@@ -254,4 +256,6 @@ $$
 \end{bmatrix}
 $$
 - ### BEST Basis Vector!!(Fourier/Wavelet)
+<div style="page-break-after: always;"></div>
+
 - ### My Understanding And Observations
