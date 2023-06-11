@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dd8c78fbc57f1bdf",
+        "id": "afd7e34beccf3bc9",
         "type": "tabs",
         "children": [
           {
-            "id": "df25aef72aba2f90",
+            "id": "fee56fa930b599e7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -139,10 +139,11 @@
       "obsidian-matrix:Obsidian Matrix": false
     }
   },
-  "active": "df25aef72aba2f90",
+  "active": "fee56fa930b599e7",
   "lastOpenFiles": [
-    "INTERIM REPORT.pdf",
     "INTERIM REPORT.md",
+    "iiitlogo.jpeg",
+    "INTERIM REPORT.pdf",
     "INTERIM REPORT3.pdf",
     "INTERIM REPORT2.pdf",
     "bwhlf.png",

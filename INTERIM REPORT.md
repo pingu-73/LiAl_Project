@@ -1,4 +1,6 @@
-# Image Compression Intrim Report
+
+![External Image|sban cover hs-med](iiitlogo.jpeg)
+# Image Compression Interim Report
 ### Project Submission Date: 20-06-2023
 ------------
 ## By:-
@@ -23,12 +25,18 @@ In the final Project report, we'll be covering the following topics:
 	- Concepts of Basis,
 	- Orthogonality, etc.
 - ###### Conclusion
-## Timeline & Division of Work
-- Ashwin Rudraraju
-- Dikshant - Motivation & JPEG part [8-06-2023 to 11-06-2023] & Writing The Latex Part
-- Srivarshitha Medarametla
-
+## Distribution of Work
+- Ashwin Rudraraju - DCT in JPEG, WEBP& Writing Slides.
+- Dikshant - Motivation & JPEG (Except DCT) & Writing The Latex Doc.
+- Srivarshitha Medarametla- Writing Code and Animations part.
+## Timeline
+#DAY1 : Distribution of work
+#DAY2: Researched for Resources and Started making some slides for final evaluation.
+#DAY3: Prepared Notes About important things in JPEG and  it's functioning. Prepared slides                     on webp.
+#DAY4/5: Slides on lossy/lossless form of compression and started animation and coding part.
+#DAY6: Prepared PDF for Interim Report.  
 - ## Resources Referred:
+	- https://en.wikipedia.org/wiki/JPEG
 	- Linear Algebra A Modern Introduction [page no. 630]  (by~David Poole) 
 	- Image Compression And Linear Algebra              (By~Sunny Verma, J.P. Krishna)
 	    (https://www.cmi.ac.in/~ksutar/NLA2013/imagecompression.pdf)
@@ -40,6 +48,7 @@ In the final Project report, we'll be covering the following topics:
 	    (https://www.researchgate.net/publication/351096054_JPEG_Image_Compression_using_Singular_Value_Decomposition)
 	- 
            (https://ieeexplore.ieee.org/abstract/document/4426357) 
+           (https://www.ijcsmc.com/docs/papers/April2016/V5I4201635.pdf)
 
 -------------------------------
 
@@ -255,7 +264,12 @@ $$
 -1
 \end{bmatrix}
 $$
-- ### BEST Basis Vector!!(Fourier/Wavelet)
-<div style="page-break-after: always;"></div>
+- ### Now the question arises what BASIS to use ???
+	- now a days JPEG uses DCT(Discrete Cosine Transformation).
+	- But I will be explaining it using Fourier Basis and how to improve it using Wavelet basis.(DWT).
+	- since DCT is similar to Fourier basis. So, understanding Fourier basis will also help in DCT understanding.
 
+	- ### FOURIER BASIS:
+	- 
+		
 - ### My Understanding And Observations
