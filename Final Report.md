@@ -1,6 +1,6 @@
 
 ![External Image|sban cover hs-med](iiitlogo.jpeg)
-# Image Compression Interim Report
+# Image Compression 
 ### Project Submission Date: 20-06-2023
 ------------
 ## By:-
@@ -20,6 +20,9 @@ In the final Project report, we'll be covering the following topics:
 	- We will try and illustrate image compression through a program (hopefully it'll be a python program).
 - ###### WEBP
 	- we will be briefly explaining "webp" which is google's new image compression technique (which can be considered as State Of Art Technique in the field of Image Compression.)
+
+<div style="page-break-after: always;"></div>
+
 - ###### Linear Algebra Topics Used
 	- SVD,
 	- Concepts of Basis,
@@ -54,9 +57,7 @@ In the final Project report, we'll be covering the following topics:
 -------------------------------
 
 ----------
-# WORK DONE TILL DATE
 
-<div style="page-break-after: always;"></div>
 
 ## Motivation:
 Taking Black and white Picture as example$(\because grey-scale\ has\ only\ two\ values)$  
@@ -73,6 +74,7 @@ Since, JPEG being is widely used. So, we'll be discussing about jpeg in our proj
 
 ------------------
 <div style="page-break-after: always;"></div>
+
 
 ## JPEG(Joint Photographic Experts Group)
 - ### HOW??
@@ -235,6 +237,7 @@ $$
 
 Combining CASE 2 and 3 with Second Example
 We get the following basis vector:
+
 $$
 \begin{bmatrix}
 1 \\
@@ -267,18 +270,184 @@ $$
 -1
 \end{bmatrix}
 $$
-- ### Now the question arises what BASIS to use ???
-	- now a days JPEG uses DCT(Discrete Cosine Transformation).
-	- But I will be explaining it using Fourier Basis and how to improve it using Wavelet basis.(DWT).
-	- since DCT is similar to Fourier basis. So, understanding Fourier basis will also help in DCT understanding.
 
-	- ### FOURIER BASIS:
-	- 
-		
-- ### My Understanding And Observations
+
+### Now the question arises what BASIS to use ???
+- now a days JPEG uses DCT(Discrete Cosine Transformation).
+- But I will be explaining it using Fourier Basis.
+- since DCT is similar to Fourier basis. So, understanding Fourier basis will also help in DCT understanding.
+
+
+<div style="page-break-after: always;"></div>
+
+
+### FOURIER BASIS:
+- Choosing a $8 \times 8$ Fourier basis is often a good choice.
+$$
+\begin{bmatrix}
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+\omega \\
+\omega ^{2} \\
+\omega ^{3} \\
+\omega ^{4} \\
+\omega ^{5} \\
+\omega ^{6} \\
+\omega ^{7}
+\end{bmatrix}...........
+\begin{bmatrix}
+1 \\
+\omega^{7} \\
+\omega ^{14} \\
+\omega ^{21} \\
+\omega ^{28} \\
+\omega ^{35} \\
+\omega ^{42} \\
+\omega ^{49}
+\end{bmatrix}
+$$
+![[fourier_Basis.jpeg]]
+- Fourier Basis takes that 64 coefficients & change them.	  
+
+
+
+
+ ![[signal.jpeg | 550]]
+
+-   On compressing coefficients from $c\ to\ \hat{c}$ we we loose information. For this we set some threshold $\&$ discard small coefficients. 
+-  $\hat{c}$ has a lots of zeros to make signal smooth.
+- $\hat{X} = \sum \hat{c} _{i} v_{i}$ , here $\hat{X}$ is the Reconstructed Signal. But we don't have 64 coefficients this time we are only left with 2 or 3 coefficients because most of the coefficients are 0.
+### Explaining The Flow Chart	
+$$ Since,\ F =
+\begin{bmatrix}
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+\omega \\
+\omega ^{2} \\
+\omega ^{3} \\
+\omega ^{4} \\
+\omega ^{5} \\
+\omega ^{6} \\
+\omega ^{7}
+\end{bmatrix}......
+\begin{bmatrix}
+1 \\
+\omega^{7} \\
+\omega ^{14} \\
+\omega ^{21} \\
+\omega ^{28} \\
+\omega ^{35} \\
+\omega ^{42} \\
+\omega ^{49}
+\end{bmatrix}
+$$
+consider a standard basis vector X$$
+		\begin{bmatrix}
+X_{1} \\
+X_{2} \\
+. \\
+. \\
+. \\
+. \\
+. \\
+X_{8}
+\end{bmatrix}
+		$$ 
+Now, $$
+		\begin{bmatrix}
+X_{1} \\
+X_{2} \\
+. \\
+. \\
+. \\
+. \\
+. \\
+X_{8}
+\end{bmatrix}
+=\ c_{1}
+\begin{bmatrix}
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1 \\
+1
+\end{bmatrix}
++\ c_{2}
+\begin{bmatrix}
+1 \\
+\omega \\
+\omega^{2} \\
+. \\
+. \\
+. \\
+. \\
+\omega_{7}
+\end{bmatrix}+\ c_{3}...........
+		$$
+$$\implies X = c_{1}F_{1} + c_{2}F_{2}+.....c_{8}F_{8}$$
+$$\implies X = 
+\begin{bmatrix}
+1 \ \ 1\ ...........\\
+1 \ \ \omega\ ...........\\
+1 \ \ \omega^{2}\ ...........\\
+1 \ \ \omega^{3}\ ...........\\
+1 \ \ \omega^{4}\ ...........\\
+1 \ \ \omega^{5}\ ...........\\
+1 \ \ \omega^{6}\ ...........\\
+1 \ \ \omega^{7}\ ...........\\
+\end{bmatrix}
+\begin{bmatrix}
+c_{1} \\
+c_{2} \\
+c_{3} \\
+c_{4} \\
+c_{5} \\
+c_{6} \\
+c_{7} \\
+c_{8} \\
+\end{bmatrix}
+$$
+$$\implies X=FC$$
+$$\implies C = F^{-1}X$$
+
+### My Observations
+- A good basis vector is one whose inverse can be calculated fast.
+- $\implies$ an Orthonormal vector would be a good choice for a basis vector because their inverse is same as their transpose.   
+
+
+
+### Can we use these images to compress video
+When we use one image after another to make video then it can create jumpy motion in video.So to correct that you have to use prediction & correction.
+We can use sampling to correct the jumpy motion.
+		![[sp.jpeg]]
+		we convolve $X(j\omega)$ with $\delta(j\omega)$ and get the output signal
+		![[sp2.jpeg]] if $\omega_{s}<2\omega_{c}$ then there will be aliasing i.e signals will mix with each other. Hence create jumpy motion.  
+		So to avoid jumpy motion $\omega_{s} ≥ 2\omega_{c}$ (Nyquist Rate).
+
+
 
 -----------------
-<div style="page-break-after: always;"></div>
 
 
 ## SOTA - latest dev in the field of Img. Compression
